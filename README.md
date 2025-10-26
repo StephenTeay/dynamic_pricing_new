@@ -11,11 +11,6 @@ A sophisticated PHP-based dynamic pricing system that automatically adjusts prod
   - Seller-defined rules
   - Market competition
 
-- **Multi-Currency Support**
-  - Real-time exchange rate updates
-  - Automatic currency conversion
-  - Support for NGN, USD, EUR, GBP
-
 - **Inventory Management**
   - Low stock alerts
   - Automatic price increases for scarce items
@@ -93,7 +88,7 @@ A sophisticated PHP-based dynamic pricing system that automatically adjusts prod
 
 1. Clone the repository:
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/StephenTeay/dynamic_pricing_new.git
    ```
 
 2. Configure your web server (Apache/Nginx) to point to the `public/` directory
@@ -101,22 +96,13 @@ A sophisticated PHP-based dynamic pricing system that automatically adjusts prod
 3. Create and configure the database:
    ```sql
    CREATE DATABASE dynamic_pricing_db;
+   username = root
+   password = 
    ```
+   Import the dynamic_pricing_db.sql
 
-4. Copy and configure environment settings:
-   ```bash
-   cp .env.example .env
-   ```
 
-5. Install dependencies:
-   ```bash
-   composer install
-   ```
 
-6. Set up database tables:
-   ```bash
-   php scripts/setup_database.php
-   ```
 
 ## Configuration
 
@@ -126,16 +112,12 @@ Configure database connection in `config/database.php`:
 return [
     'host' => 'localhost',
     'database' => 'dynamic_pricing_db',
-    'username' => 'your_username',
-    'password' => 'your_password'
+    'username' => 'root',
+    'password' => ''
 ];
 ```
 
-### Exchange Rates
-Set up your currency API key in `.env`:
-```
-CURRENCY_API_KEY=your_api_key
-```
+
 
 ## Usage
 
@@ -199,6 +181,5 @@ Set up the following cron jobs:
 4. Push to the branch
 5. Create a new Pull Request
 
-## License
-
-[Your License] © [Your Name/Company]
+Preferably, use XAMPP sever.
+If you need any help, you can reach out to me.
